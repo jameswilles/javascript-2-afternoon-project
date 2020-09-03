@@ -125,7 +125,16 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 function uniq(arr, cb) {
-  cb(arr.filter((a, b) => arr.indexOf(a) === b))
+  // cb(arr.filter((a, b) => arr.indexOf(a) === b)) found this way online. haven't learned yet.
+  let newArr = []
+  for(i = 0; i < arr.length; i++) {
+    if(newArr.includes(arr[i])){
+
+    }else{
+      newArr.push(arr[i])
+    }
+  }
+  cb(newArr)
 }
 
 // Do not edit the code below.
